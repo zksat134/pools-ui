@@ -1,0 +1,10 @@
+sources:
+  - name: privacy-pools
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/zksat134/sepolia-privacy-pools
+
+documents:
+  - ./src/query/commitments.graphql
+  - ./src/query/subsetRootsByTimestamp.graphql
+  - ./src/query/subsetDataByNullifier.graphql

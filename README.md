@@ -1,32 +1,43 @@
-State Management
+# Privacy-Pools
 
-jotai atom:
-  - has default value matching shape of typed object
+![Privacy-Pools banner image](./.github/privacy_pools_banner.png)
 
-hooks:
-  - check for default value, then
-    - populate state via queries or calculations
-  - returns direct values
+## What is Privacy-Pools
 
-components:
-  - retrieving state from hook now initializes it
-  - can still modify state using the jotai atom
+Privacy-Pools is a decentralized application (dApp) designed to enhance privacy in financial transactions. It allows users to deposit assets and withdraw using unlinked addresses. Withdrawals are accompanied by a second proof of inclusion within an arbitrary subset of deposits. This unique feature enables users to remove themselves from an anonymity set containing hacked funds, all while preserving their privacy through zero-knowledge proofs.
 
+Privacy-Pools also facilitates community-driven efforts to improve security by allowing the exclusion of laundered funds or funds originating from on-chain hacks.
 
-This is a [wagmi](https://wagmi.sh) + [RainbowKit](https://rainbowkit.com) + [Next.js](https://nextjs.org) project bootstrapped with [`create-wagmi`](https://github.com/wagmi-dev/wagmi/tree/main/packages/create-wagmi)
+## Repository Details
+
+This repository contains the frontend codebase for Privacy-Pools, forked from the [pools-ui](https://github.com/ameensol/pools-ui) project.
+
+The frontend works with smart contracts from [pools-sol](https://github.com/0x132fabb5bc2fb61fc68bcfb5508841ddb11e9/pools-sol).
+
+The frontend utilizes the minified snarkjs v0.6.9 library for zero-knowledge proof (zkProof) operations. Verifier keys required for zkProofs are generated using scripts available in the contracts repository.
 
 # Getting Started
 
-Run `npm run dev` in your terminal, and then open [localhost:3000](http://localhost:3000) in your browser.
+To get started with the Privacy-Pools frontend, follow these steps:
 
-Once the webpage has loaded, changes made to files inside the `src/` directory (e.g. `src/pages/index.tsx`) will automatically update the webpage.
+1. **Clone the Repository**: Clone this repository to your local machine using the following command:
+```bash
+   git clone https://github.com/zksat134/pools-ui
+```
 
-# Learn more
+2. **Install Dependencies**: Navigate to the project directory and install project dependencies by running the following command:
+```bash
+   cd pools-ui && yarn install
+```
 
-To learn more about [Next.js](https://nextjs.org) or [wagmi](https://wagmi.sh), check out the following resources:
+3. **Build the Project**: Once the dependencies are installed, build the project using the following command:
+```bash
+   yarn build
+```
 
-- [wagmi Documentation](https://wagmi.sh) – learn about wagmi Hooks and API.
-- [wagmi Examples](https://wagmi.sh/examples/connect-wallet) – a suite of simple examples using wagmi.
-- [RainbowKit Documentation](https://rainbowkit.com/docs/introduction) – learn more about RainbowKit (configuration, theming, advanced usage, etc).
-- [Next.js Documentation](https://nextjs.org/docs) learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Start the Development Server**: After the build process is complete, start the development server by running the following command:
+```bash
+   yarn start
+```
+
+5. **View the Application**: Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to view the Privacy-Pools application running locally on your machine.

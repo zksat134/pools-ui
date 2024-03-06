@@ -1,0 +1,21 @@
+:root {
+  --logoGradient: linear-gradient(
+      210deg, 
+      rgba(0, 234, 255, 0.25) 0%, 
+      rgba(0, 128, 255, 0.25) 25%, 
+      rgba(128, 0, 255, 0.25) 50%, 
+      rgba(230, 25, 230, 0.25) 75%, 
+      rgba(255, 0, 0, 0.5) 100%
+  );
+  /* linear-gradient(
+      210deg, 
+      #00eaff 0%, 
+      #0080ff 25%, 
+      #8000ff 50%, 
+      #e619e6 75%, 
+      #f00 100%); */
+}
+
+body {
+  overflow-x: hidden;
+}
